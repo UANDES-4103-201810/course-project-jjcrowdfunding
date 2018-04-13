@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mainpicture: MyString
+  video_url: MyString
+  description: MyText
+  tittle: MyString
+  goal_amount: 1
+  postdate: 2018-04-12 21:17:11
+  duedate: 2018-04-12 21:17:11
+  mark_down: MyString
+  views: 1
+  outstanding_value: false
+  category: 1
+
+two:
+  mainpicture: MyString
+  video_url: MyString
+  description: MyText
+  tittle: MyString
+  goal_amount: 1
+  postdate: 2018-04-12 21:17:11
+  duedate: 2018-04-12 21:17:11
+  mark_down: MyString
+  views: 1
+  outstanding_value: false
+  category: 1

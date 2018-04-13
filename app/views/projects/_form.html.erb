@@ -1,0 +1,72 @@
+<%= form_with(model: project, local: true) do |form| %>
+  <% if project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :mainpicture %>
+    <%= form.text_field :mainpicture, id: :project_mainpicture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :video_url %>
+    <%= form.text_field :video_url, id: :project_video_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :project_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tittle %>
+    <%= form.text_field :tittle, id: :project_tittle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goal_amount %>
+    <%= form.number_field :goal_amount, id: :project_goal_amount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :postdate %>
+    <%= form.datetime_select :postdate, id: :project_postdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duedate %>
+    <%= form.datetime_select :duedate, id: :project_duedate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mark_down %>
+    <%= form.text_field :mark_down, id: :project_mark_down %>
+  </div>
+
+  <div class="field">
+    <%= form.label :views %>
+    <%= form.number_field :views, id: :project_views %>
+  </div>
+
+  <div class="field">
+    <%= form.label :outstanding_value %>
+    <%= form.check_box :outstanding_value, id: :project_outstanding_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.number_field :category, id: :project_category %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
