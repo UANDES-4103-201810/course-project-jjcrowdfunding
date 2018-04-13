@@ -15,11 +15,10 @@ class Project < ApplicationRecord
 	has_many :users, through: :userviewprojects
 	has_many :userpromises, through: :promises
 	has_many :categories, through: :projectcategories
-	validates :description, presence: true
-	validates :description, length: { in: 50..500}
-	validates :tittle, presence: true
-	validates :description, presence: true
-	validates :goal_amount, presence: true
+	validates :description, presence: true, length: { in: 50..500}
+	validates :tittle, presence: true, length: { in: 3..30}
+	validates :goal_amount, presence: true, numericality: { greater_than: 0} 
 	validates :duedate, presence: true
+	validates :postdate, presence: true
 	
 end

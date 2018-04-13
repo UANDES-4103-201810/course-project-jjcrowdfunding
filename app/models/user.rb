@@ -10,10 +10,11 @@ class User < ApplicationRecord
 	has_many :projects, through: :userwishlists
 	has_many :projects, through: :userratings
 	has_many :projects, through: :userviewprojects
-	validates :name, presence: true
-	validates :lastname, presence: true
-	validates :email, presence: true
-	validates :phone, presence: true
-	validates :password, presence: true
-	validates :password, length: { in: 8..25}
+	validates :name, presence: true, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" }, uniqueness: true
+	validates :lastname, presence: true, format: { with: /\A[a-zA-Z]+\z/,
+    message: "only allows letters" }
+	validates :email, presence: true, format: { with: /\w+@\w+\.{1}[a-zA-Z]{2,}/}
+	validates :phone, presence: true, numericality: { only_integer: true }
+	validates :password, presence: true, length: { in: 8..25}
 end
