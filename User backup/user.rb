@@ -1,8 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
 	has_many :userprojects
 	has_many :userwishlists
 	has_many :projectcomments
@@ -19,6 +15,8 @@ class User < ApplicationRecord
     message: "only allows letters" }
 	validates :lastname, presence: true, format: { with: /\A[a-zA-Z]+\z/,
     message: "only allows letters" }
+	validates :email, presence: true, format: { with: /\w+@\w+\.{1}[a-zA-Z]{2,}/ }
 	validates :phone, presence: true, numericality: { only_integer: true }
+	validates :password, presence: true, length: { in: 8..25 }
 	validates :description, presence: true, length: { in: 4..666 }
 end

@@ -9,6 +9,27 @@
   </head>
 
   <body>
+  	<header>
+  		<nav class="be-red white">
+  			<ul class="no-list row center-xs">
+  				<li class="col-md">
+  					<% link_to "Inicio", root_path %>
+  					<a href="http://0.0.0.0:3000/">Inicio</a>
+  				</li>
+  				<li class="col-md">
+  					<% link_to "Profile", root_path %>
+  					<a href="users/1">Profile</a>
+  				</li>
+  				<li class="col-md">
+  					<% link_to "Newproject", root_path %>
+  					<a href="http://0.0.0.0:3000/projects/new">New Project</a>
+  				</li>
+  				<li class="col-md">
+  					<% link_to "Search", root_path %>
+  					<a href="http://0.0.0.0:3000/search">Search</a>
+                </li>
     <%= yield %>
+    
+    
   </body>
 </html>
