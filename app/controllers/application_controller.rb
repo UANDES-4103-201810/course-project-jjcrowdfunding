@@ -1,3 +1,3 @@
-class ApplicationController < ActionController::Base
+yclass ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 end

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'home/show'
 
   resources :projects
-  root 'users#index'
+  root 'users#show'
   
   get '/profile', to: 'application#profile', as: 'profile'
   get '/register', to: 'application#register', as: 'register'
