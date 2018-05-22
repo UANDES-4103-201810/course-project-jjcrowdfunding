@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+
   devise_for :users
   get 'home/show'
 
-  resources :projects
+  resources :projects, :users
   root 'users#show'
   
   get '/profile', to: 'application#profile', as: 'profile'

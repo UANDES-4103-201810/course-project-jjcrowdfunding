@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
     <title>CourseProjectJjcrowdfunding</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  
 
   <body>
   	<header>
-  		<nav class="be-red white">
-  			<ul class="no-list row center-xs">
-  				<li class="col-md">
-  					<% link_to "Inicio", root_path %>
-  					<a href="http://0.0.0.0:3000/">Inicio</a>
-  				</li>
-  				<li class="col-md">
-  					<% link_to "Profile", root_path %>
-  					<a href="users/1">Profile</a>
-  				</li>
-  				<li class="col-md">
-  					<% link_to "Newproject", root_path %>
-  					<a href="http://0.0.0.0:3000/projects/new">New Project</a>
-  				</li>
-  				<li class="col-md">
-  					<% link_to "Search", root_path %>
-  					<a href="http://0.0.0.0:3000/search">Search</a>
-                </li>
+      <style>
+      .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      
+      </style>
+        <link rel="styleshit" type="text/css" href="mystyle1.css">
+      		<nav align="center" class="be-red white">
+      			<ul class="no-list row center-xs">
+      				<h class="none" >
+
+      					<% link_to "Inicio", root_path %>
+      					<a class="button" href="http://0.0.0.0:3000/">Inicio</a>
+      			
+      					<% link_to "Profile", root_path %>
+      					<a class="button" href="http://0.0.0.0:3000/users">Profile</a>
+      				
+                <% link_to "Projects", root_path %>
+                <a class="button" href="http://0.0.0.0:3000/projects">Projects</a>
+              
+      					<% link_to "Newproject", root_path %>
+      					<a class="button" href="http://0.0.0.0:3000/projects/new">New Project</a>
+      				
+      					<% link_to "Search", root_path %>
+      					<a class="button" href="http://0.0.0.0:3000/search">Search</a>
+                    </h>
     <%= yield %>
     
     
   </body>
+  </head>
 </html>
