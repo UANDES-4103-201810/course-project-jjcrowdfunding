@@ -28,12 +28,14 @@
       			<ul class="no-list row center-xs">
       				<h class="none" >
 
-      					<% link_to "Inicio", root_path %>
-      					<a class="button" href="http://0.0.0.0:3000/">Inicio</a>
-      			
-      					<% link_to "Profile", root_path %>
-      					<a class="button" href="http://0.0.0.0:3000/users">Profile</a>
-      				
+      					<%= link_to "Inicio", root_path , :class=>'button' %>
+
+
+      			    <% if user_signed_in? %>
+      					 <%= link_to "Profile", user_path, :id=>@user.id, :class=>'button' %>  
+                <% else %>
+      				    <%= link_to "Log In", new_user_session_path,  :class=>'button' %>  
+                <% end %>
                 <% link_to "Projects", root_path %>
                 <a class="button" href="http://0.0.0.0:3000/projects">Projects</a>
               
