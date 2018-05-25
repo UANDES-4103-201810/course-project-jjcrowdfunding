@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  picture: MyText
+  video: MyString
+  goalamount: 1
+  duedate: 2018-05-24 19:19:26
+  startdate: 2018-05-24 19:19:26
+  markdown: MyText
+  category: 1
+  views: 1
+
+two:
+  title: MyString
+  description: MyText
+  picture: MyText
+  video: MyString
+  goalamount: 1
+  duedate: 2018-05-24 19:19:26
+  startdate: 2018-05-24 19:19:26
+  markdown: MyText
+  category: 1
+  views: 1
