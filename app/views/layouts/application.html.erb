@@ -19,6 +19,7 @@
 			      	<%= link_to("Sign out", destroy_user_session_path, method: :delete, :class=>'button') %>
               <%= link_to("Projects", projects_path, :class=>'button') %>
               <%= link_to("Edit User", edit_user_registration_path, :class=>"button") %>
+              <%= link_to("Edit User", edit_user_registration_path, :class=>"button") %>
 
 			      <% else %>
 			      	<%= link_to "Log In", new_user_session_path,  :class=>'button' %>  
