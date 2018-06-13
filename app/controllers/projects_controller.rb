@@ -6,7 +6,14 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.all
   end
-
+  # def search
+  #   @projects = Project.all
+  #   if params[:search]
+  #     @projects = Project.search(params[:search]).order("created_at DESC")
+  #   else
+  #     @projects = Project.all.order("created_at DESC")
+  #   end
+  # end
   # GET /projects/1
   # GET /projects/1.json
   def show

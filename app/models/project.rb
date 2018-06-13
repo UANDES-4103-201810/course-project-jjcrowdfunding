@@ -20,4 +20,7 @@ class Project < ApplicationRecord
 	validates :goalamount, presence: true, numericality: { greater_than: 0 }
 	validates :duedate, presence: true
 	validates :startdate, presence: true
+	def self.search(search)
+	  where("title LIKE ? OR description LIKE ?", "%#{search}%", "%#{search}%") #para agregar usuarios a la busquda agregar like user ?
+	end
 end
